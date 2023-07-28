@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "AngularNetCore401k", "AngularNetCore401k\AngularNetCore401k.esproj", "{708B652B-0F30-4664-BA77-E0DB5C747E2F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularNetCore401kData", "AngularNetCore401kData\AngularNetCore401kData.csproj", "{BE019B99-1D31-4F0B-A8A7-E56B6E36262C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{708B652B-0F30-4664-BA77-E0DB5C747E2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{708B652B-0F30-4664-BA77-E0DB5C747E2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{708B652B-0F30-4664-BA77-E0DB5C747E2F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{708B652B-0F30-4664-BA77-E0DB5C747E2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{708B652B-0F30-4664-BA77-E0DB5C747E2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{708B652B-0F30-4664-BA77-E0DB5C747E2F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BE019B99-1D31-4F0B-A8A7-E56B6E36262C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE019B99-1D31-4F0B-A8A7-E56B6E36262C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE019B99-1D31-4F0B-A8A7-E56B6E36262C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE019B99-1D31-4F0B-A8A7-E56B6E36262C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A492749D-51D2-4DBC-BBB4-16740B9DC353}
+	EndGlobalSection
+EndGlobal

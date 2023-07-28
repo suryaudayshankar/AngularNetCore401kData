@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AngularNetCore401kData.props" />
+</Project>
