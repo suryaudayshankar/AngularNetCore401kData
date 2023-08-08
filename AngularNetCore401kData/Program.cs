@@ -1,5 +1,7 @@
 using AngularNetCore401kData.Interfaces;
 using AngularNetCore401kData.DataAccess;
+using Microsoft.AspNetCore.Cors;
+
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,6 +33,17 @@ RasConnectionString = rasConnection;
 
 var app = builder.Build();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder =>
+        {
+            builder.WithOrigins("https://localhost:4200") // Adjust this to your Angular app's URL
+                   .AllowAnyHeader()
+                   .AllowAnyMethod();
+        });
+});
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -43,6 +56,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
+app.UseCors("AllowSpecificOrigin");
 app.UseRouting();
 
 app.UseAuthorization();
@@ -52,7 +66,6 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
-
 
 
 public partial class Program

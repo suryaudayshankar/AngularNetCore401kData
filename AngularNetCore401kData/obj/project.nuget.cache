@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "xGCx/LU8NRbkMRC2ntbwU85eU1jTmmtCYuYtuz0wzeshTWjX7ZH7seaFvLw6k/BGQdrOHwrNTZgNUoX0l7cwJg==",
+  "dgSpecHash": "PMDRrLSs1AmkPi9PDaOtZ1uK27fS/cO6Bn6N+eAb8TKYc1ZmBhD2vJFxEmZzhwk8JjPL0jCly9JbCNZuHAGuBg==",
   "success": true,
   "projectFilePath": "C:\\Users\\sudayshankar\\source\\repos\\AngularNetCore401k\\AngularNetCore401kData\\AngularNetCore401kData.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\sudayshankar\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
+    "C:\\Users\\sudayshankar\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\sudayshankar\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
+    "C:\\Users\\sudayshankar\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\sudayshankar\\.nuget\\packages\\microsoft.aspnetcore.nodeservices\\5.0.0-preview.8.20414.8\\microsoft.aspnetcore.nodeservices.5.0.0-preview.8.20414.8.nupkg.sha512",
     "C:\\Users\\sudayshankar\\.nuget\\packages\\microsoft.aspnetcore.spaservices\\5.0.0-preview.8.20414.8\\microsoft.aspnetcore.spaservices.5.0.0-preview.8.20414.8.nupkg.sha512",
     "C:\\Users\\sudayshankar\\.nuget\\packages\\microsoft.aspnetcore.spaservices.extensions\\6.0.11\\microsoft.aspnetcore.spaservices.extensions.6.0.11.nupkg.sha512",
@@ -22,6 +26,7 @@
     "C:\\Users\\sudayshankar\\.nuget\\packages\\microsoft.extensions.options\\5.0.0-preview.8.20407.11\\microsoft.extensions.options.5.0.0-preview.8.20407.11.nupkg.sha512",
     "C:\\Users\\sudayshankar\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\5.0.0-preview.8.20407.11\\microsoft.extensions.options.configurationextensions.5.0.0-preview.8.20407.11.nupkg.sha512",
     "C:\\Users\\sudayshankar\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\sudayshankar\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\sudayshankar\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\sudayshankar\\.nuget\\packages\\microsoft.typescript.msbuild\\4.9.4\\microsoft.typescript.msbuild.4.9.4.nupkg.sha512",
     "C:\\Users\\sudayshankar\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
@@ -32,6 +37,7 @@
     "C:\\Users\\sudayshankar\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\sudayshankar\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\sudayshankar\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\sudayshankar\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\sudayshankar\\.nuget\\packages\\system.configuration.configurationmanager\\7.0.0\\system.configuration.configurationmanager.7.0.0.nupkg.sha512",
     "C:\\Users\\sudayshankar\\.nuget\\packages\\system.data.sqlclient\\4.8.5\\system.data.sqlclient.4.8.5.nupkg.sha512",
     "C:\\Users\\sudayshankar\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
@@ -40,6 +46,7 @@
     "C:\\Users\\sudayshankar\\.nuget\\packages\\system.security.cryptography.protecteddata\\7.0.0\\system.security.cryptography.protecteddata.7.0.0.nupkg.sha512",
     "C:\\Users\\sudayshankar\\.nuget\\packages\\system.security.permissions\\7.0.0\\system.security.permissions.7.0.0.nupkg.sha512",
     "C:\\Users\\sudayshankar\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\sudayshankar\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
     "C:\\Users\\sudayshankar\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
   ],
   "logs": []

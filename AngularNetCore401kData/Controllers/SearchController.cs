@@ -2,11 +2,13 @@
 using Microsoft.AspNetCore.Mvc;
 using AngularNetCore401kData.Interfaces;
 using AngularNetCore401kData.Models;
+using Microsoft.AspNetCore.Cors;
 
 namespace AngularNetCore401kData.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("AllowSpecificOrigin")]
     public class StatesController : ControllerBase
     {
         [HttpGet]
@@ -21,6 +23,7 @@ namespace AngularNetCore401kData.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("AllowSpecificOrigin")]
     public class CountiesController : ControllerBase
     {
         [HttpGet]
