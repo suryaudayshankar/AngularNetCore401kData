@@ -3,13 +3,14 @@ using Microsoft.AspNetCore.Mvc;
 using AngularNetCore401kData.Interfaces;
 using AngularNetCore401kData.Models;
 using Microsoft.AspNetCore.Cors;
+using AngularNetCore401kData.DataAccess;
 
 namespace AngularNetCore401kData.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    [EnableCors("AllowSpecificOrigin")]
-    public class StatesController : ControllerBase
+    /*[Route("api/[controller]")]
+    [ApiController]*/
+    /*    [EnableCors("AllowSpecificOrigin")]*/
+    /*public class StatesController : ControllerBase
     {
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get(string country)
@@ -19,11 +20,31 @@ namespace AngularNetCore401kData.Controllers
             // var states = _context.States.Where(s => s.Country == country).ToList();
             return new List<string> { "State 1", "State 2" };
         }
+    }*/
+
+    [ApiController]
+    [Route("api/[controller]")]
+    public class StatesController : ControllerBase
+    {
+        private readonly SearchDataAccessLayer _searchDataAccessLayer;
+
+        public StatesController(SearchDataAccessLayer searchDataAccessLayer)
+        {
+            _searchDataAccessLayer = searchDataAccessLayer;
+        }
+
+        [HttpGet]
+        public IActionResult GetStates(string country)
+        {
+            var states = _searchDataAccessLayer.GetStates(country);
+            return Ok(states);
+        }
     }
+
 
     [Route("api/[controller]")]
     [ApiController]
-    [EnableCors("AllowSpecificOrigin")]
+ /*   [EnableCors("AllowSpecificOrigin")]*/
     public class CountiesController : ControllerBase
     {
         [HttpGet]

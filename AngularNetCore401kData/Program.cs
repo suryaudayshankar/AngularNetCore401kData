@@ -1,6 +1,8 @@
 using AngularNetCore401kData.Interfaces;
 using AngularNetCore401kData.DataAccess;
 using Microsoft.AspNetCore.Cors;
+using AngularNetCore401kData.DataAccess;
+
 
 
 
@@ -10,6 +12,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddTransient<IRasCode, RasCodeDataAccessLayer>();
 builder.Services.AddTransient<IHour, HourDataAccessLayer>();
+builder.Services.AddTransient<SearchDataAccessLayer>();
+
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddControllers();
@@ -24,6 +28,17 @@ builder.Services.AddControllers();
 //    configuration.RootPath = "ClientApp/dist";
 //});
 
+/*builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder =>
+        {
+            builder.WithOrigins("https://localhost:4200") // Adjust this to your Angular app's URL
+                   .AllowAnyHeader()
+                   .AllowAnyMethod();
+        });
+});*/
+
 
 var connString = builder.Configuration.GetConnectionString("DefaultConnection");
 var rasConnection = builder.Configuration.GetConnectionString("RasConnection");
@@ -33,16 +48,7 @@ RasConnectionString = rasConnection;
 
 var app = builder.Build();
 
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowSpecificOrigin",
-        builder =>
-        {
-            builder.WithOrigins("https://localhost:4200") // Adjust this to your Angular app's URL
-                   .AllowAnyHeader()
-                   .AllowAnyMethod();
-        });
-});
+
 
 
 // Configure the HTTP request pipeline.
