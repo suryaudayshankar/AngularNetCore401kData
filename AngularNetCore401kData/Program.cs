@@ -42,9 +42,11 @@ builder.Services.AddControllers();
 
 var connString = builder.Configuration.GetConnectionString("DefaultConnection");
 var rasConnection = builder.Configuration.GetConnectionString("RasConnection");
+var rasDevConnection = builder.Configuration.GetConnectionString("RasDevConnection");
 
 ConnectionString = connString;
 RasConnectionString = rasConnection;
+RasDevConnectionString = rasDevConnection;
 
 var app = builder.Build();
 
@@ -78,6 +80,8 @@ public partial class Program
 {
     public static string? ConnectionString { get; private set; }
     public static string? RasConnectionString { get; private set; }
+
+    public static string? RasDevConnectionString { get; private set; }
 
   //  public static MsSqlDataConnection? ReportSqlConnection { get; private set; }
 
