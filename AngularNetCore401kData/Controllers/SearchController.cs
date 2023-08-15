@@ -24,37 +24,40 @@ namespace AngularNetCore401kData.Controllers
 
     [ApiController]
     [Route("api/[controller]")]
-    public class StatesController : ControllerBase
+    public class SearchController : ControllerBase
     {
         private readonly SearchDataAccessLayer _searchDataAccessLayer;
 
-        public StatesController(SearchDataAccessLayer searchDataAccessLayer)
+        public SearchController(SearchDataAccessLayer searchDataAccessLayer)
         {
             _searchDataAccessLayer = searchDataAccessLayer;
         }
 
         [HttpGet]
+        [Route("states/{country}")]
         public IActionResult GetStates(string country)
         {
             var states = _searchDataAccessLayer.GetStates(country);
             return Ok(states);
         }
-    }
 
-
-    [Route("api/[controller]")]
-    [ApiController]
- /*   [EnableCors("AllowSpecificOrigin")]*/
-    public class CountiesController : ControllerBase
-    {
         [HttpGet]
+        [Route("counties/{state}")]
         public ActionResult<IEnumerable<string>> Get(string state)
         {
-            // Replace with actual logic to get counties for the given state from your database
-            // You might use something like:
-            // var counties = _context.Counties.Where(c => c.State == state).ToList();
-            return new List<string> { "County 1", "County 2" };
+            var counties = _searchDataAccessLayer.GetCounties(state);
+            return Ok(counties);
         }
+
+        [HttpPost]
+        [Route("search")]
+        public IActionResult Search([FromBody] SearchCriteria criteria)
+        {
+            var results = _searchDataAccessLayer.GetResults(criteria);
+            return Ok(results);
+        }
+
     }
 }
+
 
