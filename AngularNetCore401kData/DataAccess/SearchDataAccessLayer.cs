@@ -195,9 +195,9 @@ namespace AngularNetCore401kData.DataAccess
                 conditions.Add($"Lcl_ID IN({localList})");
             }
 
-            string where = conditions.Any() ? "WHERE " + string.Join(" AND ", conditions) : string.Empty;
+            string where = conditions.Any() ? "A where " + string.Join(" And ", conditions) : string.Empty;
 
-            return $"{A where} Option (MaxDOP 1)";
+            return $"{where} Option (MaxDOP 1)";
         }
 
     }

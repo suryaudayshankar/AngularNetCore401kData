@@ -30,13 +30,10 @@ builder.Services.AddControllers();
 
 /*builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowSpecificOrigin",
-        builder =>
-        {
-            builder.WithOrigins("https://localhost:4200") // Adjust this to your Angular app's URL
-                   .AllowAnyHeader()
-                   .AllowAnyMethod();
-        });
+    options.AddPolicy("AllowMyOrigin",
+        builder => builder.WithOrigins("https://localhost:4200") 
+                           .AllowAnyMethod()
+                           .AllowAnyHeader());
 });*/
 
 
@@ -64,7 +61,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-app.UseCors("AllowSpecificOrigin");
+//app.UseCors("AllowMyOrigin");
 app.UseRouting();
 
 app.UseAuthorization();
