@@ -24,6 +24,8 @@ namespace AngularNetCore401kData.Controllers
 
     [ApiController]
     [Route("api/[controller]")]
+    [EnableCors("CorsPolicy")]
+
     public class SearchController : ControllerBase
     {
         private readonly SearchDataAccessLayer _searchDataAccessLayer;
@@ -43,6 +45,7 @@ namespace AngularNetCore401kData.Controllers
 
         [HttpGet]
         [Route("counties/{state}")]
+        
         public ActionResult<IEnumerable<string>> Get(string state)
         {
             var counties = _searchDataAccessLayer.GetCounties(state);

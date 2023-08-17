@@ -36,6 +36,14 @@ builder.Services.AddControllers();
                            .AllowAnyHeader());
 });*/
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy",
+        builder => builder.WithOrigins("http://localhost:4200")
+                          .AllowAnyMethod()
+                          .AllowAnyHeader()
+                          /*.WithHeaders("Access-Control-Allow-Origin")*/);
+});
 
 var connString = builder.Configuration.GetConnectionString("DefaultConnection");
 var rasConnection = builder.Configuration.GetConnectionString("RasConnection");
@@ -58,17 +66,22 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 //app.UseCors("AllowMyOrigin");
 app.UseRouting();
 
+app.UseCors("CorsPolicy");
+app.UseHttpsRedirection();
+
 app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+});
 
 app.Run();
 
