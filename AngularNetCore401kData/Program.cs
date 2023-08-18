@@ -42,7 +42,7 @@ builder.Services.AddCors(options =>
         builder => builder.WithOrigins("http://localhost:4200")
                           .AllowAnyMethod()
                           .AllowAnyHeader()
-                          /*.WithHeaders("Access-Control-Allow-Origin")*/);
+                        /*  .WithHeaders("Access-Control-Allow-Origin")*/);
 });
 
 var connString = builder.Configuration.GetConnectionString("DefaultConnection");
